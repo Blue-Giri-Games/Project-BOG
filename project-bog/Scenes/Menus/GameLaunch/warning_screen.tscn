@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bfxoo7nnvsm6k"]
 
-[ext_resource type="Script" uid="uid://dls5a0d7c84hw" path="res://Stages/Menus/GameLaunch/warning_message.gd" id="1_cgh4x"]
+[ext_resource type="Script" uid="uid://dls5a0d7c84hw" path="res://Scenes/Menus/GameLaunch/warning_message.gd" id="1_cgh4x"]
 
 [node name="WarningScreen" type="Control" unique_id=900840403]
 layout_mode = 3
