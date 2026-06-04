@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bfxoo7nnvsm6k"]
+
+[ext_resource type="Script" uid="uid://dls5a0d7c84hw" path="res://Stages/Menus/GameLaunch/warning_message.gd" id="1_cgh4x"]
+
+[node name="WarningScreen" type="Control" unique_id=900840403]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=925966844]
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=34260196]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WarningMessage" type="Label" parent="CanvasLayer/PanelContainer" unique_id=883056570]
+layout_mode = 2
+script = ExtResource("1_cgh4x")
+
+[node name="Timer" type="Timer" parent="CanvasLayer/PanelContainer/WarningMessage" unique_id=205128998]
+wait_time = 3.75
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/PanelContainer/WarningMessage" unique_id=1324995581]
+
+[connection signal="timeout" from="CanvasLayer/PanelContainer/WarningMessage/Timer" to="CanvasLayer/PanelContainer/WarningMessage" method="_on_timer_timeout"]
+[connection signal="animation_finished" from="CanvasLayer/PanelContainer/WarningMessage/AnimationPlayer" to="CanvasLayer/PanelContainer/WarningMessage" method="_on_animation_player_animation_finished"]
